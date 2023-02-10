@@ -163,22 +163,6 @@ title{
     cursor: pointer;
 }
 
-.developer{
-    background: #002d56;
-    width: 20%;
-    height: 6vh;
-    transition: 1s;
-    border-style: hidden;
-    border-radius: 2%;
-    color: white;
-    font-size: 15px;
-}
-
-.developer:hover{
-    background: #8d704f;
-    width: 30%;
-    height: 7vh;
-}
 @font-face {
     font-family: "외대얇";
     src: url(fonts/한국외대체M.ttf);
