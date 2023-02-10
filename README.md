@@ -1,1 +1,0 @@
-# vsugang_practice
