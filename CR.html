@@ -12,17 +12,137 @@
                 }
             }
 
-            function registerClick(){
+            function register1Click(){
                 var TorF = confirm('과목을 수강신청 하시겠습니까?')
                 if(TorF == true){
-                    count++
-                    alert('수강신청이 저장완료되었습니다.')
-                    if (count === 8){
-                        stopStopwatch()
+                    if (rc1 + 1 == 2){
+                        alert('201 : 이미 신청된 교과목을 신청하였습니다.\n 다시확인하시고 신청해 주십시오.')
+                    } else{
+                        alert('수강신청이 저장완료되었습니다.')
+                        count++
+                        rc1++
+                        
+                        if (count === 8){
+                            stopStopwatch()
+                        }
+                    }
+                }
+            }
+
+            function register2Click(){
+                var TorF = confirm('과목을 수강신청 하시겠습니까?')
+                if(TorF == true){
+                    if (rc2 + 1 == 2){
+                        alert('201 : 이미 신청된 교과목을 신청하였습니다.\n 다시확인하시고 신청해 주십시오.')
+                    } else{
+                        alert('수강신청이 저장완료되었습니다.')
+                        count++
+                        rc2++
+                        
+                        if (count === 8){
+                            stopStopwatch()
+                        }
+                    }
+                }
+            }
+
+            function register3Click(){
+                var TorF = confirm('과목을 수강신청 하시겠습니까?')
+                if(TorF == true){
+                    if (rc3 + 1 == 2){
+                        alert('201 : 이미 신청된 교과목을 신청하였습니다.\n 다시확인하시고 신청해 주십시오.')
+                    } else{
+                        alert('수강신청이 저장완료되었습니다.')
+                        count++
+                        rc3++
+                        
+                        if (count === 8){
+                            stopStopwatch()
+                        }
                     }
                 }
             }
             
+            function register4Click(){
+                var TorF = confirm('과목을 수강신청 하시겠습니까?')
+                if(TorF == true){
+                    if (rc4 + 1 == 2){
+                        alert('201 : 이미 신청된 교과목을 신청하였습니다.\n 다시확인하시고 신청해 주십시오.')
+                    } else{
+                        alert('수강신청이 저장완료되었습니다.')
+                        count++
+                        rc4++
+                        
+                        if (count === 8){
+                            stopStopwatch()
+                        }
+                    }
+                }
+            }
+            function register5Click(){
+                var TorF = confirm('과목을 수강신청 하시겠습니까?')
+                if(TorF == true){
+                    if (rc5 + 1 == 2){
+                        alert('201 : 이미 신청된 교과목을 신청하였습니다.\n 다시확인하시고 신청해 주십시오.')
+                    } else{
+                        alert('수강신청이 저장완료되었습니다.')
+                        count++
+                        rc5++
+                        
+                        if (count === 8){
+                            stopStopwatch()
+                        }
+                    }
+                }
+            }
+            function register6Click(){
+                var TorF = confirm('과목을 수강신청 하시겠습니까?')
+                if(TorF == true){
+                    if (rc6 + 1 == 2){
+                        alert('201 : 이미 신청된 교과목을 신청하였습니다.\n 다시확인하시고 신청해 주십시오.')
+                    } else{
+                        alert('수강신청이 저장완료되었습니다.')
+                        count++
+                        rc6++
+                        
+                        if (count === 8){
+                            stopStopwatch()
+                        }
+                    }
+                }
+            }
+            function register7Click(){
+                var TorF = confirm('과목을 수강신청 하시겠습니까?')
+                if(TorF == true){
+                    if (rc7 + 1 == 2){
+                        alert('201 : 이미 신청된 교과목을 신청하였습니다.\n 다시확인하시고 신청해 주십시오.')
+                    } else{
+                        alert('수강신청이 저장완료되었습니다.')
+                        count++
+                        rc7++
+                        
+                        if (count === 8){
+                            stopStopwatch()
+                        }
+                    }
+                }
+            }
+            function register8Click(){
+                var TorF = confirm('과목을 수강신청 하시겠습니까?')
+                if(TorF == true){
+                    if (rc8 + 1 == 2){
+                        alert('201 : 이미 신청된 교과목을 신청하였습니다.\n 다시확인하시고 신청해 주십시오.')
+                    } else{
+                        alert('수강신청이 저장완료되었습니다.')
+                        count++
+                        rc8++
+                        
+                        if (count === 8){
+                            stopStopwatch()
+                        }
+                    }
+                }
+            }
             function stopStopwatch(){
                 today = new Date();
                 var time2 = '';
@@ -39,6 +159,14 @@
             }
 
             var count = 0
+            var rc1 = 0
+            var rc2 = 0
+            var rc3 = 0
+            var rc4 = 0
+            var rc5 = 0
+            var rc6 = 0
+            var rc7 = 0
+            var rc8 = 0
             var today = new Date();
             var time1 = String(today.getMonth()).padStart(2, '0') + String(today.getDate()).padStart(2, '0') + String(today.getHours()).padStart(2, '0')
             + String(today.getMinutes()).padStart(2, '0') + String(today.getSeconds()).padStart(2, '0') + String(today.getMilliseconds()).padStart(3, '0');
@@ -52,7 +180,7 @@
                     <h1>2023 - 1학기 수강신청 연습</h1>
                     <p>학번 : 202200000</p>
                     <p>성명 : dlacked</p>
-                    <p>캠퍼스 : 글로벌캠퍼스</p>
+                    <p>캠퍼스 : 서울/글로벌캠퍼스</p>
                     <p>수강학과 : 컴퓨터공학전공</p>
                     <p>수강학년 : 2학년</p>
                     <p>수강가능학점 : 최대 20학점</p>
@@ -110,7 +238,7 @@
                                 </tr>
                                 <tr>
                                     <td>1</td>
-                                    <td><button class="register" onClick="registerClick()"></button></td>
+                                    <td><button class="register" onClick="register1Click()"></button></td>
                                     <td>전공</td>
                                     <td>T01234567</td>
                                     <td>F</td>
@@ -125,7 +253,7 @@
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td><button class="register" onClick="registerClick()"></button></td>
+                                    <td><button class="register" onClick="register2Click()"></button></td>
                                     <td>전공</td>
                                     <td>T87654321</td>
                                     <td>F</td>
@@ -140,7 +268,7 @@
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td><button class="register" onClick="registerClick()"></button></td>
+                                    <td><button class="register" onClick="register3Click()"></button></td>
                                     <td>전공</td>
                                     <td>S20212223</td>
                                     <td></td>
@@ -155,7 +283,7 @@
                                 </tr>
                                 <tr>
                                     <td>4</td>
-                                    <td><button class="register" onClick="registerClick()"></button></td>
+                                    <td><button class="register" onClick="register4Click()"></button></td>
                                     <td>전공</td>
                                     <td>I01023398</td>
                                     <td></td>
@@ -170,7 +298,7 @@
                                 </tr>
                                 <tr>
                                     <td>5</td>
-                                    <td><button class="register" onClick="registerClick()"></button></td>
+                                    <td><button class="register" onClick="register5Click()"></button></td>
                                     <td>과기</td>
                                     <td>T35140000</td>
                                     <td>F</td>
@@ -185,7 +313,7 @@
                                 </tr>
                                 <tr>
                                     <td>6</td>
-                                    <td><button class="register" onClick="registerClick()"></button></td>
+                                    <td><button class="register" onClick="register6Click()"></button></td>
                                     <td>생활</td>
                                     <td>U19900905</td>
                                     <td></td>
@@ -200,7 +328,7 @@
                                 </tr>
                                 <tr>
                                     <td>7</td>
-                                    <td><button class="register" onClick="registerClick()"></button></td>
+                                    <td><button class="register" onClick="register7Click()"></button></td>
                                     <td>인성</td>
                                     <td>B00000000</td>
                                     <td></td>
@@ -215,7 +343,7 @@
                                 </tr>
                                 <tr>
                                     <td>8</td>
-                                    <td><button class="register" onClick="registerClick()"></button></td>
+                                    <td><button class="register" onClick="register8Click()"></button></td>
                                     <td>사철</td>
                                     <td>H19600000</td>
                                     <td></td>
