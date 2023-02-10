@@ -187,16 +187,17 @@ title {
   /*DELETE 버튼*/
   background-image: url('img/delete.png');
   background-repeat: no-repeat;
+  background-size: cover;
   border-style: hidden;
-  width: 44px;
-  height: 16px;
+  width: 45px;
+  height: 15px;
   cursor: pointer;
 }
 
 .doneUp {
   color: #ab704f;
   text-align: left;
-  font-size: x-small;
+  font-size: 13px;
 }
 
 @font-face {
