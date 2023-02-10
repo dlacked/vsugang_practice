@@ -148,15 +148,8 @@
                 }
             }
             function stopStopwatch(){
-                today = new Date();
-                var time2 = '';
-                time2 += String(today.getMonth()).padStart(2, '0');
-                time2 += String(today.getDate()).padStart(2, '0');
-                time2 += String(today.getHours()).padStart(2, '0');
-                time2 += String(today.getMinutes()).padStart(2, '0');
-                time2 += String(today.getSeconds()).padStart(2, '0');
-                time2 += String(today.getMilliseconds()).padStart(3, '0');
-                alert(`${((time2 - time1) / 1000) % 60}초 걸렸습니다.`)
+                var today2 = new Date();
+                alert(`${((today2 - today1) / 1000)}초 걸렸습니다.`)
                 clearInterval(timer);
                 alert(timer)
                 
@@ -171,10 +164,8 @@
             var rc6 = 0
             var rc7 = 0
             var rc8 = 0
-            var today = new Date();
-            var time1 = String(today.getMonth()).padStart(2, '0') + String(today.getDate()).padStart(2, '0') + String(today.getHours()).padStart(2, '0')
-            + String(today.getMinutes()).padStart(2, '0') + String(today.getSeconds()).padStart(2, '0') + String(today.getMilliseconds()).padStart(3, '0');
-        
+            var today1 = new Date();
+            
         </script>
     </head>
     <body>
@@ -264,7 +255,7 @@
                                     <td>How to use Facebook</td>
                                     <td>2</td>
                                     <td>3</td>
-                                    <td>Mark Zuckerberg</td>
+                                    <td>Mark zuckerberg</td>
                                     <td>수 1 2 3 ( )</td>
                                     <td>0 / 60</td>
                                     <td><input type="checkbox"></td>
