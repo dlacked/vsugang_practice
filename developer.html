@@ -5,15 +5,15 @@
         <meta charset="UTF-8">
         <link href="style.css" rel="stylesheet" type="text/css">
         <script>
-            function notEntry(){
+            function notEntry(){ //notice, 수강신청 및 수정/삭제, 개발자 소개 외의 버튼 눌렀을 때 실행
                 alert("'수강신청 및 수정/삭제'를 눌러 측정을 시작하세요.")
             }
         </script>
     </head>
     <body>
-        <div class="half">
-            <div class="left">
-                <div class="hufsBlue">
+        <div class="half"> <!--메뉴(왼쪽)와 정보(오른쪽) 나눔(display: grid)-->
+            <div class="left"> <!--화면의 왼쪽 메뉴에 해당, HUFS GREEN(위)과 HUFS GOLD(아래) 나눔(display: grid)-->
+                <div class="hufsGreen"> <!--HUFS GREEN부분-->
                     <h1>2023 - 1학기 수강신청 연습</h1>
                     <p>학번 : 202200000</p>
                     <p>성명 : dlacked</p>
@@ -22,10 +22,10 @@
                     <p>수강학년 : 2학년</p>
                     <p>수강가능학점 : 최대 20학점</p>
                 </div>
-                <div class="hufsGold">
+                <div class="hufsGold"> <!--HUFS GOLD부분-->
                     <div><button class = "button" onclick="notEntry()">로그아웃(Logout)</button></div>
                     <div><a href="index.html"><button id="noticeButton">Notice</button></div></a>
-                    <div><a href="CR.html"><button class = "button">수강신청 및 수정/삭제</button></div></a>
+                    <div><a href="Course_Registeration.html"><button class = "button">수강신청 및 수정/삭제</button></div></a>
                     <div><button class = "button" onclick="notEntry()">수강신청열람</button></div>
                     <div><button class = "button" onclick="notEntry()">시간표조회</button></div>
                     <div><button class = "button" onclick="notEntry()">강의시간표조회</button></div>
@@ -33,15 +33,14 @@
                     
                 </div>
             </div>
-            <div class="right">
+            <div class="right"> <!--화면의 오른쪽 정보 출력에 해당, 내용 가운데 배치를 위해 grid 사용-->
                 <div></div>
                 <div>
-                    <p id="notice-small">Main Developer: dlacked (<a href="https://dlacked.github.io">dlacked.github.io</a>)</p>
+                    <p id="notice-small">Main Developer: dlacked (<a href="https://dlacked.github.io" target='_blank'>dlacked.github.io</a>)</p>
                     <p id="notice-small">Contributer: None</p>
                 </div>
                 <div>
-                    <div>Copyright 2023. dlacked
-                        All rights reserved.</div>
+                    Copyright 2023. dlacked All rights reserved.
                 </div>
             </div>
         </div>
