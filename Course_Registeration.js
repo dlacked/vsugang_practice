@@ -1,8 +1,8 @@
 function pyoDisplay() {
   //Search 버튼 눌렀을 때 표 표시
   const pyo = document.getElementById('pyo')
-  if (pyo.style.display !== 'none') {
-    pyo.style.display = 'grid'
+  if (pyo.style.visibility !== 'hidden') {
+    pyo.style.visibility = 'visible'
   }
 }
 
