@@ -136,13 +136,12 @@ p {
 
 #pyo {
   /*Search 버튼 누르기 전 예비수강신청함 차트 가리기*/
-  /*현재 수강신청 및 수정/삭제 위에 있는 차트의 스크롤 바 제작 중에 있음.*/
   margin-top: 65px;
-  height: 30vh;
+  height: 40vh;
   visibility: hidden;
   display: grid;
   grid-template-columns: 1fr 40fr 1fr;
-  /*overflow: auto;*/
+  overflow: auto;
 }
 
 #pyopyo {
