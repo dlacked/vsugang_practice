@@ -200,6 +200,7 @@ function done(clicked) {
       '<td>T01234567</td>' +
       '<td>F</td>' +
       '<td>MacOS</td>' +
+      '<td>2</td>' +
       '<td>3</td>' +
       '<td>Bill Gates</td>' +
       '<td>월 1 2 3 ( )</td>' +
@@ -217,6 +218,7 @@ function done(clicked) {
       '<td>T87654321</td>' +
       '<td>F</td>' +
       '<td>How to use Facebook</td>' +
+      '<td>2</td>' +
       '<td>3</td>' +
       '<td>Mark Zuckerberg</td>' +
       '<td>수 1 2 3 ( )</td>' +
@@ -234,6 +236,7 @@ function done(clicked) {
       '<td>S20212223</td>' +
       '<td></td>' +
       '<td>애플학개론</td>' +
+      '<td>2</td>' +
       '<td>3</td>' +
       '<td>이재용</td>' +
       '<td>수 4 5 ( )</td>' +
@@ -252,6 +255,7 @@ function done(clicked) {
       '<td></td>' +
       '<td>프론트엔드의 모든 것</td>' +
       '<td>2</td>' +
+      '<td>2</td>' +
       '<td>임창용</td>' +
       '<td>화 7 8 ( )</td>' +
       '<td>0 / 14</td>' +
@@ -268,6 +272,7 @@ function done(clicked) {
       '<td>T35140000</td>' +
       '<td>F</td>' +
       '<td>Tesla Mechanism</td>' +
+      '<td>-</td>' +
       '<td>2</td>' +
       '<td>Elon Musk</td>' +
       '<td>월 7 8 ( )</td>' +
@@ -285,6 +290,7 @@ function done(clicked) {
       '<td>U19900905</td>' +
       '<td></td>' +
       '<td>체육(피겨)</td>' +
+      '<td>-</td>' +
       '<td>1</td>' +
       '<td>김연아</td>' +
       '<td>금 3 4 ( )</td>' +
@@ -302,6 +308,7 @@ function done(clicked) {
       '<td>B00000000</td>' +
       '<td></td>' +
       '<td>밥상머리인성교육</td>' +
+      '<td>-</td>' +
       '<td>2</td>' +
       '<td></td>' +
       '<td>금 5 6 ( )</td>' +
@@ -319,6 +326,7 @@ function done(clicked) {
       '<td>H19600000</td>' +
       '<td></td>' +
       '<td>한국외국어대학교사</td>' +
+      '<td>-</td>' +
       '<td>2</td>' +
       '<td>박정운</td>' +
       '<td>화 5 6 ( )</td>' +
