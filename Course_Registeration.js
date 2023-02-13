@@ -251,7 +251,7 @@ function done(clicked) {
       '</td>' +
       '<td><button class="delete" onClick="deleteDone()"></button></td>' +
       '<td>전공</td>' +
-      '<td>I01023398</td>' +
+      '<td>I23398948</td>' +
       '<td></td>' +
       '<td>프론트엔드의 모든 것</td>' +
       '<td>2</td>' +
@@ -305,7 +305,7 @@ function done(clicked) {
       '</td>' +
       '<td><button class="delete" onClick="deleteDone()"></button></td>' +
       '<td>인성</td>' +
-      '<td>B00000000</td>' +
+      '<td>B20230213</td>' +
       '<td></td>' +
       '<td>밥상머리인성교육</td>' +
       '<td>-</td>' +
@@ -323,7 +323,7 @@ function done(clicked) {
       '</td>' +
       '<td><button class="delete" onClick="deleteDone()"></button></td>' +
       '<td>사철</td>' +
-      '<td>H19600000</td>' +
+      '<td>H19540420</td>' +
       '<td></td>' +
       '<td>한국외국어대학교사</td>' +
       '<td>-</td>' +

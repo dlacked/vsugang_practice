@@ -33,7 +33,7 @@ body {
   text-align: center;
 }
 
-.hufsGreen {
+.hufsBlue {
   background-color: #1f326a;
 
   padding-left: 10px;
@@ -59,6 +59,7 @@ p {
   color: white;
   border-style: hidden;
   font-family: 굴림;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -75,6 +76,7 @@ p {
   color: white;
   border-style: hidden;
   font-family: 굴림;
+  cursor: pointer;
 }
 
 #noticeButton:hover {
