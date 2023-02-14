@@ -179,7 +179,7 @@ function stopStopwatch() {
   //스톱워치, register 총합 8번 눌렸을 시 스톱워치 종료
   var today2 = new Date()
   alert(`${(today2 - today1) / 1000}초 걸렸습니다.`) //스톱워치 종료시간에서 페이지 입장 시간을 뺌
-  location.replace('index.html');
+  location.replace('https://vsugangpractice.com');
 }
 
 function deleteDone(){
