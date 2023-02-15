@@ -35,8 +35,11 @@ body {
 
 .hufsBlue {
   background-color: #1f326a;
-
   padding-left: 10px;
+}
+
+#logo{
+  width: 85%;
 }
 
 h1 {
