@@ -137,8 +137,9 @@ p {
 #pyopyo {
   /*수강신청 및 수정/삭제 아래에 있는 차트*/
   height: 50px;
-  grid-template-columns: 1fr 40fr 1fr;
   width: 95%;
+  grid-template-columns: 1fr 40fr 1fr;
+
   margin: auto;
 }
 
