@@ -1,8 +1,8 @@
 function pyoDisplay() {
   //Search 버튼 눌렀을 때 표 표시
   const pyo = document.getElementById('pyo')
-  if (pyo.style.display !== 'none') {
-    pyo.style.display = 'grid'
+  if (pyo.style.visibility !== 'hidden') {
+    pyo.style.visibility = 'visible'
   }
 }
 
@@ -156,7 +156,7 @@ function register7Click() {
 }
 function register8Click() {
   //여덟 번째 과목 클릭 시 실행되는 함수
-  var TorF = confirm('과목을 수강신청 하시겠습니까?')
+  var TorF = confirm('해당 과목을 수강신청 하시겠습니까?')
   if (TorF == true) {
     if (rc8 + 1 == 2) {
       alert(
@@ -174,16 +174,19 @@ function register8Click() {
     }
   }
 }
+
 function stopStopwatch() {
   //스톱워치, register 총합 8번 눌렸을 시 스톱워치 종료
   var today2 = new Date()
   alert(`${(today2 - today1) / 1000}초 걸렸습니다.`) //스톱워치 종료시간에서 페이지 입장 시간을 뺌
-  clearInterval(timer)
-  alert(timer)
+  //location.replace('index.html');
 }
 
 function deleteDone() {
-  let abc = contirm('[해당 과목]을 삭제 하시겠습니까?')
+  var torf = confirm('해당 과목을 삭제 하시겠습니까?')
+  if (torf === true) {
+    alert('000 : 개발 중인 기능입니다.')
+  }
 }
 
 //리스트 map을 통해 해당
