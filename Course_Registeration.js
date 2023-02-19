@@ -201,9 +201,6 @@ function stopStopwatch() {
 function deleteDone(newCnt) {
   var torf = confirm('해당 과목을 삭제 하시겠습니까?')
   if (torf === true) {
-    parent = document.getElementById('done')
-    child = document.getElementById(`${newCnt}`)
-
     alert(
       '예비수강신청함에서 선택한 과목이 삭제완료되었습니다.\n실제로 삭제되진 않습니다.'
     )
@@ -449,8 +446,6 @@ function done(clicked) {
   tr.setAttribute('id', `${cnt}`)
   //마지막으로 id='done'이라는 태그 밑에 자식 노드로 tr을 전달
   document.getElementById('done').appendChild(tr)
-  console.log(document.getElementById('done'))
-  console.log(tr)
 }
 
 var count = 0
