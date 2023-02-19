@@ -180,166 +180,310 @@ function stopStopwatch() {
   var today2 = new Date()
   alert(`${(today2 - today1) / 1000}초 걸렸습니다.`) //스톱워치 종료시간에서 페이지 입장 시간을 뺌
   //location.replace('index.html');
+  //console.log(noObject)
 }
 
-function deleteDone(){
+function deleteDone(nowCnt) {
   var torf = confirm('해당 과목을 삭제 하시겠습니까?')
-  if (torf === true){
-    alert('000 : 개발 중인 기능입니다.')
+  if (torf === true) { 
+    cnt-- //삭제 후 추가시 번호가 8이 넘어가는 현상을 막기 위함
+    switch (noObject[nowCnt]){ //어떤 과목의 DELETE 버튼을 눌렀냐에 따라 그 과목에 대한 REGISTER 버튼이 재활성화됨.
+      case 1:
+        rc1--
+        break
+      case 2:
+        rc2--
+        break
+      case 3:
+        rc3--
+        break
+      case 4:
+        rc4--
+        break
+      case 5:
+        rc5--
+        break
+      case 6:
+        rc6--
+        break
+      case 7:
+        rc7--
+        break
+      case 8:
+        rc8--
+        break
+    }
+    const parent = document.getElementById('done')
+    parent.deleteRow(nowCnt - 1)
+    const children = parent.childNodes
+    for (i = 0; i < children.length; i++) {
+      children[i].childNodes[0].innerHTML = `<td>${i + 1}</td>`
+      children[i].childNodes[1].innerHTML = `<td><button class="delete" onClick=deleteDone(${i + 1})></button><td>`
+      //console.log(children[i].childNodes[1])
+    }
+    count -= 1
+    alert('수강신청함에서 선택한 과목이 삭제완료되었습니다.')
+    delete noObject[nowCnt]
+    for (var i = nowCnt; i <= Object.keys(noObject).length; i++){ //담겨진 수강신청 번호에 맞는 과목이 들어가도록 for문을 통해 재정비
+      var tmp = noObject[i+1]
+      noObject[i] = tmp
+      delete noObject[i+1]
+    }
+    //console.log(noObject)
   }
 }
 
+//리스트 map을 통해 해당
 function done(clicked) {
+  //노드를 이용해 추후 삭제할 노드를 삭제
   //몇번을 클릭했느냐에 따라 함수 호출
   cnt += 1 //몇번째로 클릭했느냐에 따라 번호 출력
-  const item = document.getElementById('done')
+  // tr부분 요소
+  let td = [] // td부분 요소
+  let tr = document.createElement('tr')
+  for (i = 0; i < 13; i++) {
+    td.push(document.createElement('td'))
+  }
+  let text = [] //td에 저장할 텍스트
+  let nowCnt = cnt
+  //텍스트가 아닌 html요소 button을 입력하는 변수
+  let btn = document.createElement('button')
+  btn.setAttribute('class', 'delete')
+  btn.setAttribute('onClick', `deleteDone(${nowCnt})`)
+  let ipt = document.createElement('input')
+  ipt.setAttribute('type', 'checkbox')
+
   if (clicked === 1) {
-    item.innerHTML +=
-      '<tr><td>' +
-      cnt +
-      '</td>' + //innerHTML을 통해 테이블의 내용 출력
-      '<td><button class="delete" onClick="deleteDone()"></button></td>' +
-      '<td>전공</td>' +
-      '<td>T01234567</td>' +
-      '<td>F</td>' +
-      '<td>MacOS</td>' +
-      '<td>2</td>' +
-      '<td>3</td>' +
-      '<td>Bill Gates</td>' +
-      '<td>월 1 2 3 ( )</td>' +
-      '<td>0 / 100</td>' +
-      '<td><input type="checkbox"></td>' +
-      '<td></td></tr>'
+    noObject[cnt] = clicked;
+    //숫자인 변수를 저장하기위해 백틱`${}`사용
+    text.push(document.createTextNode(`${cnt}`))
+    //button들어갈 곳
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('전공'))
+    text.push(document.createTextNode('T01234567'))
+    text.push(document.createTextNode('F'))
+    text.push(document.createTextNode('MacOS'))
+    text.push(document.createTextNode('2'))
+    text.push(document.createTextNode('3'))
+    text.push(document.createTextNode('Bill Gates'))
+    text.push(document.createTextNode('월 1 2 3 ( )'))
+    text.push(document.createTextNode('0 / 100'))
+    //input들어갈 곳
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode(''))
+    for (i = 0; i < text.length; i++) {
+      if (i === 1) {
+        td[i].appendChild(btn)
+      }
+      if (i === 11) {
+        td[i].appendChild(ipt)
+      }
+      if (i !== 1 && i !== 11) {
+        td[i].appendChild(text[i])
+      }
+    }
   }
   if (clicked === 2) {
-    item.innerHTML +=
-      '<tr><td>' +
-      cnt +
-      '</td>' +
-      '<td><button class="delete" onClick="deleteDone()"></button></td>' +
-      '<td>전공</td>' +
-      '<td>T87654321</td>' +
-      '<td>F</td>' +
-      '<td>How to use Facebook</td>' +
-      '<td>2</td>' +
-      '<td>3</td>' +
-      '<td>Mark Zuckerberg</td>' +
-      '<td>수 1 2 3 ( )</td>' +
-      '<td>0 / 60</td>' +
-      '<td><input type="checkbox"></td>' +
-      '<td></td></tr>'
+    noObject[cnt] = clicked;
+    text.push(document.createTextNode(`${cnt}`))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('전공'))
+    text.push(document.createTextNode('T87654321'))
+    text.push(document.createTextNode('F'))
+    text.push(document.createTextNode('How to use Facebook'))
+    text.push(document.createTextNode('2'))
+    text.push(document.createTextNode('3'))
+    text.push(document.createTextNode('Mark Zuckerberg'))
+    text.push(document.createTextNode('수 1 2 3 ( )'))
+    text.push(document.createTextNode('0 / 60'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode(''))
+    for (i = 0; i < text.length; i++) {
+      if (i === 1) {
+        td[i].appendChild(btn)
+      }
+      if (i === 11) {
+        td[i].appendChild(ipt)
+      }
+      if (i !== 1 && i !== 11) {
+        td[i].appendChild(text[i])
+      }
+    }
   }
   if (clicked === 3) {
-    item.innerHTML +=
-      '<tr><td>' +
-      cnt +
-      '</td>' +
-      '<td><button class="delete" onClick="deleteDone()"></button></td>' +
-      '<td>전공</td>' +
-      '<td>S20212223</td>' +
-      '<td></td>' +
-      '<td>애플학개론</td>' +
-      '<td>2</td>' +
-      '<td>3</td>' +
-      '<td>이재용</td>' +
-      '<td>수 4 5 ( )</td>' +
-      '<td>0 / 23</td>' +
-      '<td><input type="checkbox"></td>' +
-      '<td></td></tr>'
+    noObject[cnt] = clicked;
+    text.push(document.createTextNode(`${cnt}`))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('전공'))
+    text.push(document.createTextNode('S20212223'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('애플학개론'))
+    text.push(document.createTextNode('2'))
+    text.push(document.createTextNode('3'))
+    text.push(document.createTextNode('이재용'))
+    text.push(document.createTextNode('수 4 5 ( )'))
+    text.push(document.createTextNode('0 / 23'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode(''))
+    for (i = 0; i < text.length; i++) {
+      if (i === 1) {
+        td[i].appendChild(btn)
+      }
+      if (i === 11) {
+        td[i].appendChild(ipt)
+      }
+      if (i !== 1 && i !== 11) {
+        td[i].appendChild(text[i])
+      }
+    }
   }
   if (clicked === 4) {
-    item.innerHTML +=
-      '<tr><td>' +
-      cnt +
-      '</td>' +
-      '<td><button class="delete" onClick="deleteDone()"></button></td>' +
-      '<td>전공</td>' +
-      '<td>I23398948</td>' +
-      '<td></td>' +
-      '<td>프론트엔드의 모든 것</td>' +
-      '<td>2</td>' +
-      '<td>2</td>' +
-      '<td>임창용</td>' +
-      '<td>화 7 8 ( )</td>' +
-      '<td>0 / 14</td>' +
-      '<td><input type="checkbox"></td>' +
-      '<td></td></tr>'
+    noObject[cnt] = clicked;
+    text.push(document.createTextNode(`${cnt}`))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('전공'))
+    text.push(document.createTextNode('I23398948'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('프론트엔드의 모든 것'))
+    text.push(document.createTextNode('2'))
+    text.push(document.createTextNode('2'))
+    text.push(document.createTextNode('임창용'))
+    text.push(document.createTextNode('화 7 8 ( )'))
+    text.push(document.createTextNode('0 / 14'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode(''))
+    for (i = 0; i < text.length; i++) {
+      if (i === 1) {
+        td[i].appendChild(btn)
+      }
+      if (i === 11) {
+        td[i].appendChild(ipt)
+      }
+      if (i !== 1 && i !== 11) {
+        td[i].appendChild(text[i])
+      }
+    }
   }
   if (clicked === 5) {
-    item.innerHTML +=
-      '<tr><td>' +
-      cnt +
-      '</td>' +
-      '<td><button class="delete" onClick="deleteDone()"></button></td>' +
-      '<td>과기</td>' +
-      '<td>T35140000</td>' +
-      '<td>F</td>' +
-      '<td>Tesla Mechanism</td>' +
-      '<td>-</td>' +
-      '<td>2</td>' +
-      '<td>Elon Musk</td>' +
-      '<td>월 7 8 ( )</td>' +
-      '<td>0 / 100</td>' +
-      '<td><input type="checkbox"></td>' +
-      '<td></td></tr>'
+    noObject[cnt] = clicked;
+    text.push(document.createTextNode(`${cnt}`))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('과기'))
+    text.push(document.createTextNode('T35140000'))
+    text.push(document.createTextNode('F'))
+    text.push(document.createTextNode('Tesla Mechanism'))
+    text.push(document.createTextNode('-'))
+    text.push(document.createTextNode('2'))
+    text.push(document.createTextNode('Elon Musk'))
+    text.push(document.createTextNode('월 7 8 ( )'))
+    text.push(document.createTextNode('0 / 100'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode(''))
+    for (i = 0; i < text.length; i++) {
+      if (i === 1) {
+        td[i].appendChild(btn)
+      }
+      if (i === 11) {
+        td[i].appendChild(ipt)
+      }
+      if (i !== 1 && i !== 11) {
+        td[i].appendChild(text[i])
+      }
+    }
   }
   if (clicked === 6) {
-    item.innerHTML +=
-      '<tr><td>' +
-      cnt +
-      '</td>' +
-      '<td><button class="delete" onClick="deleteDone()"></button></td>' +
-      '<td>생활</td>' +
-      '<td>U19900905</td>' +
-      '<td></td>' +
-      '<td>체육(피겨)</td>' +
-      '<td>-</td>' +
-      '<td>1</td>' +
-      '<td>김연아</td>' +
-      '<td>금 3 4 ( )</td>' +
-      '<td>0 / 50</td>' +
-      '<td><input type="checkbox"></td>' +
-      '<td></td></tr>'
+    noObject[cnt] = clicked;
+    text.push(document.createTextNode(`${cnt}`))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('생활'))
+    text.push(document.createTextNode('U19900905'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('체육(피겨)'))
+    text.push(document.createTextNode('-'))
+    text.push(document.createTextNode('1'))
+    text.push(document.createTextNode('김연아'))
+    text.push(document.createTextNode('금 3 4 ( )'))
+    text.push(document.createTextNode('0 / 50'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode(''))
+    for (i = 0; i < text.length; i++) {
+      if (i === 1) {
+        td[i].appendChild(btn)
+      }
+      if (i === 11) {
+        td[i].appendChild(ipt)
+      }
+      if (i !== 1 && i !== 11) {
+        td[i].appendChild(text[i])
+      }
+    }
   }
   if (clicked === 7) {
-    item.innerHTML +=
-      '<tr><td>' +
-      cnt +
-      '</td>' +
-      '<td><button class="delete" onClick="deleteDone()"></button></td>' +
-      '<td>인성</td>' +
-      '<td>B20230213</td>' +
-      '<td></td>' +
-      '<td>밥상머리인성교육</td>' +
-      '<td>-</td>' +
-      '<td>2</td>' +
-      '<td></td>' +
-      '<td>금 5 6 ( )</td>' +
-      '<td>0 / 10</td>' +
-      '<td><input type="checkbox"></td>' +
-      '<td></td></tr>'
+    noObject[cnt] = clicked;
+    text.push(document.createTextNode(`${cnt}`))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('인성'))
+    text.push(document.createTextNode('B20230213'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('밥상머리인성교육'))
+    text.push(document.createTextNode('-'))
+    text.push(document.createTextNode('2'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('금 5 6 ( )'))
+    text.push(document.createTextNode('0 / 10'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode(''))
+    for (i = 0; i < text.length; i++) {
+      if (i === 1) {
+        td[i].appendChild(btn)
+      }
+      if (i === 11) {
+        td[i].appendChild(ipt)
+      }
+      if (i !== 1 && i !== 11) {
+        td[i].appendChild(text[i])
+      }
+    }
   }
   if (clicked === 8) {
-    item.innerHTML +=
-      '<tr><td>' +
-      cnt +
-      '</td>' +
-      '<td><button class="delete" onClick="deleteDone()"></button></td>' +
-      '<td>사철</td>' +
-      '<td>H19540420</td>' +
-      '<td></td>' +
-      '<td>한국외국어대학교사</td>' +
-      '<td>-</td>' +
-      '<td>2</td>' +
-      '<td>박정운</td>' +
-      '<td>화 5 6 ( )</td>' +
-      '<td>0 / 20</td>' +
-      '<td><input type="checkbox"></td>' +
-      '<td></td></tr>'
+    noObject[cnt] = clicked;
+    text.push(document.createTextNode(`${cnt}`))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('사철'))
+    text.push(document.createTextNode('H19540420'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('한국외국어대학교사'))
+    text.push(document.createTextNode('-'))
+    text.push(document.createTextNode('2'))
+    text.push(document.createTextNode('박정운'))
+    text.push(document.createTextNode('화 5 6 ( )'))
+    text.push(document.createTextNode('0 / 20'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode(''))
+    for (i = 0; i < text.length; i++) {
+      if (i === 1) {
+        td[i].appendChild(btn)
+      }
+      if (i === 11) {
+        td[i].appendChild(ipt)
+      }
+      if (i !== 1 && i !== 11) {
+        td[i].appendChild(text[i])
+      }
+    }
   }
+
+  for (i = 0; i < 13; i++) {
+    //td에 저장한 노드들을 tr의 자식노드로 전달
+    tr.appendChild(td[i])
+  }
+  tr.setAttribute('id', `${cnt}`)
+  //마지막으로 id='done'이라는 태그 밑에 자식 노드로 tr을 전달
+  document.getElementById('done').appendChild(tr)
 }
 
-var count = 0
+var noObject = {} //key: 담겨진 과목의 No., value: 예비수강신청함의 No.
+var count = 0 
 let cnt = 0 //done()함수용 count 위랑 다릅니다
 var rc1 = 0
 var rc2 = 0
