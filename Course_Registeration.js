@@ -21,6 +21,8 @@ function register1Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
+      let hide = document.getElementById('a-1')
+      hide.style.display = 'none'
       count++
       rc1++
       done(1)
@@ -42,6 +44,8 @@ function register2Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
+      let hide = document.getElementById('a-2')
+      hide.style.display = 'none'
       count++
       rc2++
       done(2)
@@ -63,6 +67,8 @@ function register3Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
+      let hide = document.getElementById('a-3')
+      hide.style.display = 'none'
       count++
       rc3++
       done(3)
@@ -84,6 +90,8 @@ function register4Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
+      let hide = document.getElementById('a-4')
+      hide.style.display = 'none'
       count++
       rc4++
       done(4)
@@ -104,6 +112,8 @@ function register5Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
+      let hide = document.getElementById('a-5')
+      hide.style.display = 'none'
       count++
       rc5++
       done(5)
@@ -124,6 +134,8 @@ function register6Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
+      let hide = document.getElementById('a-6')
+      hide.style.display = 'none'
       count++
       rc6++
       done(6)
@@ -144,6 +156,8 @@ function register7Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
+      let hide = document.getElementById('a-7')
+      hide.style.display = 'none'
       count++
       rc7++
       done(7)
@@ -164,6 +178,8 @@ function register8Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
+      let hide = document.getElementById('a-8')
+      hide.style.display = 'none'
       count++
       rc8++
       done(8)
@@ -185,6 +201,9 @@ function stopStopwatch() {
 function deleteDone(newCnt) {
   var torf = confirm('해당 과목을 삭제 하시겠습니까?')
   if (torf === true) {
+    parent = document.getElementById('done')
+    child = document.getElementById(`${newCnt}`)
+
     alert(
       '예비수강신청함에서 선택한 과목이 삭제완료되었습니다.\n실제로 삭제되진 않습니다.'
     )
