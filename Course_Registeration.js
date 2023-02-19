@@ -180,21 +180,56 @@ function stopStopwatch() {
   var today2 = new Date()
   alert(`${(today2 - today1) / 1000}초 걸렸습니다.`) //스톱워치 종료시간에서 페이지 입장 시간을 뺌
   //location.replace('index.html');
+  //console.log(noObject)
 }
 
 function deleteDone(nowCnt) {
   var torf = confirm('해당 과목을 삭제 하시겠습니까?')
-  if (torf === true) {
+  if (torf === true) { 
+    cnt-- //삭제 후 추가시 번호가 8이 넘어가는 현상을 막기 위함
+    switch (noObject[nowCnt]){ //어떤 과목의 DELETE 버튼을 눌렀냐에 따라 그 과목에 대한 REGISTER 버튼이 재활성화됨.
+      case 1:
+        rc1--
+        break
+      case 2:
+        rc2--
+        break
+      case 3:
+        rc3--
+        break
+      case 4:
+        rc4--
+        break
+      case 5:
+        rc5--
+        break
+      case 6:
+        rc6--
+        break
+      case 7:
+        rc7--
+        break
+      case 8:
+        rc8--
+        break
+    }
     const parent = document.getElementById('done')
     parent.deleteRow(nowCnt - 1)
     const children = parent.childNodes
     for (i = 0; i < children.length; i++) {
       children[i].childNodes[0].innerHTML = `<td>${i + 1}</td>`
       children[i].childNodes[1].innerHTML = `<td><button class="delete" onClick=deleteDone(${i + 1})></button><td>`
-      console.log(children[i].childNodes[1])
+      //console.log(children[i].childNodes[1])
     }
     count -= 1
     alert('수강신청함에서 선택한 과목이 삭제완료되었습니다.')
+    delete noObject[nowCnt]
+    for (var i = nowCnt; i <= Object.keys(noObject).length; i++){ //담겨진 수강신청 번호에 맞는 과목이 들어가도록 for문을 통해 재정비
+      var tmp = noObject[i+1]
+      noObject[i] = tmp
+      delete noObject[i+1]
+    }
+    //console.log(noObject)
   }
 }
 
@@ -219,6 +254,7 @@ function done(clicked) {
   ipt.setAttribute('type', 'checkbox')
 
   if (clicked === 1) {
+    noObject[cnt] = clicked;
     //숫자인 변수를 저장하기위해 백틱`${}`사용
     text.push(document.createTextNode(`${cnt}`))
     //button들어갈 곳
@@ -248,6 +284,7 @@ function done(clicked) {
     }
   }
   if (clicked === 2) {
+    noObject[cnt] = clicked;
     text.push(document.createTextNode(`${cnt}`))
     text.push(document.createTextNode(''))
     text.push(document.createTextNode('전공'))
@@ -274,6 +311,7 @@ function done(clicked) {
     }
   }
   if (clicked === 3) {
+    noObject[cnt] = clicked;
     text.push(document.createTextNode(`${cnt}`))
     text.push(document.createTextNode(''))
     text.push(document.createTextNode('전공'))
@@ -300,6 +338,7 @@ function done(clicked) {
     }
   }
   if (clicked === 4) {
+    noObject[cnt] = clicked;
     text.push(document.createTextNode(`${cnt}`))
     text.push(document.createTextNode(''))
     text.push(document.createTextNode('전공'))
@@ -326,6 +365,7 @@ function done(clicked) {
     }
   }
   if (clicked === 5) {
+    noObject[cnt] = clicked;
     text.push(document.createTextNode(`${cnt}`))
     text.push(document.createTextNode(''))
     text.push(document.createTextNode('과기'))
@@ -352,6 +392,7 @@ function done(clicked) {
     }
   }
   if (clicked === 6) {
+    noObject[cnt] = clicked;
     text.push(document.createTextNode(`${cnt}`))
     text.push(document.createTextNode(''))
     text.push(document.createTextNode('생활'))
@@ -378,6 +419,7 @@ function done(clicked) {
     }
   }
   if (clicked === 7) {
+    noObject[cnt] = clicked;
     text.push(document.createTextNode(`${cnt}`))
     text.push(document.createTextNode(''))
     text.push(document.createTextNode('인성'))
@@ -404,6 +446,7 @@ function done(clicked) {
     }
   }
   if (clicked === 8) {
+    noObject[cnt] = clicked;
     text.push(document.createTextNode(`${cnt}`))
     text.push(document.createTextNode(''))
     text.push(document.createTextNode('사철'))
@@ -439,7 +482,8 @@ function done(clicked) {
   document.getElementById('done').appendChild(tr)
 }
 
-var count = 0
+var noObject = {} //key: 담겨진 과목의 No., value: 예비수강신청함의 No.
+var count = 0 
 let cnt = 0 //done()함수용 count 위랑 다릅니다
 var rc1 = 0
 var rc2 = 0
