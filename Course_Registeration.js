@@ -21,8 +21,6 @@ function register1Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
-      let hide = document.getElementById('a-1')
-      hide.style.display = 'none'
       count++
       rc1++
       done(1)
@@ -44,8 +42,6 @@ function register2Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
-      let hide = document.getElementById('a-2')
-      hide.style.display = 'none'
       count++
       rc2++
       done(2)
@@ -67,8 +63,6 @@ function register3Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
-      let hide = document.getElementById('a-3')
-      hide.style.display = 'none'
       count++
       rc3++
       done(3)
@@ -90,8 +84,6 @@ function register4Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
-      let hide = document.getElementById('a-4')
-      hide.style.display = 'none'
       count++
       rc4++
       done(4)
@@ -112,8 +104,6 @@ function register5Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
-      let hide = document.getElementById('a-5')
-      hide.style.display = 'none'
       count++
       rc5++
       done(5)
@@ -134,8 +124,6 @@ function register6Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
-      let hide = document.getElementById('a-6')
-      hide.style.display = 'none'
       count++
       rc6++
       done(6)
@@ -156,8 +144,6 @@ function register7Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
-      let hide = document.getElementById('a-7')
-      hide.style.display = 'none'
       count++
       rc7++
       done(7)
@@ -178,8 +164,6 @@ function register8Click() {
       )
     } else {
       alert('수강신청이 저장완료되었습니다.')
-      let hide = document.getElementById('a-8')
-      hide.style.display = 'none'
       count++
       rc8++
       done(8)
@@ -206,17 +190,11 @@ function deleteDone(nowCnt) {
     const children = parent.childNodes
     for (i = 0; i < children.length; i++) {
       children[i].childNodes[0].innerHTML = `<td>${i + 1}</td>`
-      children[
-        i
-      ].childNodes[1].innerHTML = `<td><button class="delete" onClick=deleteDone(${
-        i + 1
-      })></button><td>`
+      children[i].childNodes[1].innerHTML = `<td><button class="delete" onClick=deleteDone(${i + 1})></button><td>`
       console.log(children[i].childNodes[1])
     }
     count -= 1
-    alert(
-      '예비수강신청함에서 선택한 과목이 삭제완료되었습니다.\n실제로 삭제되진 않습니다.'
-    )
+    alert('수강신청함에서 선택한 과목이 삭제완료되었습니다.')
   }
 }
 
@@ -463,8 +441,6 @@ function done(clicked) {
 
 var count = 0
 let cnt = 0 //done()함수용 count 위랑 다릅니다
-let doneList = []
-let countList = []
 var rc1 = 0
 var rc2 = 0
 var rc3 = 0
