@@ -198,9 +198,22 @@ function stopStopwatch() {
   //location.replace('index.html');
 }
 
-function deleteDone(newCnt) {
+function deleteDone(nowCnt) {
   var torf = confirm('해당 과목을 삭제 하시겠습니까?')
   if (torf === true) {
+    const parent = document.getElementById('done')
+    parent.deleteRow(nowCnt - 1)
+    const children = parent.childNodes
+    for (i = 0; i < children.length; i++) {
+      children[i].childNodes[0].innerHTML = `<td>${i + 1}</td>`
+      children[
+        i
+      ].childNodes[1].innerHTML = `<td><button class="delete" onClick=deleteDone(${
+        i + 1
+      })></button><td>`
+      console.log(children[i].childNodes[1])
+    }
+    count -= 1
     alert(
       '예비수강신청함에서 선택한 과목이 삭제완료되었습니다.\n실제로 삭제되진 않습니다.'
     )
@@ -219,11 +232,11 @@ function done(clicked) {
     td.push(document.createElement('td'))
   }
   let text = [] //td에 저장할 텍스트
-
+  let nowCnt = cnt
   //텍스트가 아닌 html요소 button을 입력하는 변수
   let btn = document.createElement('button')
   btn.setAttribute('class', 'delete')
-  btn.setAttribute('onClick', 'deleteDone()')
+  btn.setAttribute('onClick', `deleteDone(${nowCnt})`)
   let ipt = document.createElement('input')
   ipt.setAttribute('type', 'checkbox')
 
