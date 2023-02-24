@@ -4,15 +4,14 @@
         <title>HUFS수강연습</title>
         <meta charset="UTF-8">
         <meta name="description" content="한국외국어대학교 수강신청 모의 연습 사이트입니다.">
-        <meta name="keyword" content="HUFS수강연습, 외대수강연습, HUFS, 한국외대, 한국외대 수강신청, 한국외대 수강신청 연습, 수강신청 연습, 한국외국어대학교, 외대, 외대 수강신청, 외대 수강신청 연습, 수강신청, 수강신청 모의연습, 한국외대 수강신청 모의연습, 한국외대 수강신청 연습, 외대 수강신청 모의연습, sugangpractice, vsugangpractice">
+        <meta name="keyword" content="HUFS, HUFS수강연습, 외대수강연습, HUFS연습, 외대연습, 수강연습, 한국외대, 한국외대 수강신청, 한국외대 수강신청 연습, 수강신청 연습, 한국외국어대학교, 외대, 외대 수강신청, 외대 수강신청 연습, 수강신청, 수강신청 모의연습, 한국외대 수강신청 모의연습, 한국외대 수강신청 연습, 외대 수강신청 모의연습, sugangpractice, vsugangpractice">
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        
         <div class="half"> <!--메뉴(왼쪽)와 정보(오른쪽) 나눔(display: grid)-->
-            <div class="left">
-                <div class="hufsBlue">
-                    <h1>2023 - 1학기 수강신청 연습</h1>
+            <div class="left"> <!--화면의 왼쪽 메뉴에 해당, HUFS Blue(위)과 HUFS GOLD(아래) 나눔(display: grid)-->
+                <div class="hufsBlue"> <!--HUFS Blue-->
+                    <h1>2023 - 2학기 수강신청 연습</h1>
                     <p>학번 : </p>
                     <p>성명 : 수강신청연습</p>
                     <p>캠퍼스 : </p>
@@ -20,14 +19,15 @@
                     <p>수강학년 : </p>
                     <p>수강가능학점 : </p>
                 </div>
-                <div class="hufsGold">
+                <div class="hufsGold"> <!--HUFS GOLD부분-->
                     <div><button class = "button" onclick="notEntry()">로그아웃(Logout)</button></div>
                     <div><a href="index.html"><button id="noticeButton">Notice</button></a></div>
                     <div><a href="Course_Registeration.html"><button class = "button">수강신청 및 수정/삭제</button></a></div>
                     <div><button class = "button" onclick="notEntry()">수강신청열람</button></div>
                     <div><button class = "button" onclick="notEntry()">시간표조회</button></div>
                     <div><button class = "button" onclick="notEntry()">강의시간표조회</button></div>
-                    <div><a href="developer.html"><button class = "button">개발자 소개</button></a></div>
+                    <div><a href="developer.html"><button class = "button">개발자 소개</button></div></a>
+                    
                 </div>
             </div>
             <div class="Course_Registeration_right"> <!--화면의 오른쪽 정보 출력에 해당, 내용 가운데 배치를 위해 grid 사용-->
@@ -123,7 +123,7 @@
                                     <td>전공</td>
                                     <td>I23398948</td>
                                     <td></td>
-                                    <td>프론트엔드</td>
+                                    <td>프론트엔드의 모든 것</td>
                                     <td>2</td>
                                     <td>2</td>
                                     <td>임창용</td>
@@ -189,36 +189,6 @@
                                     <td>박정운</td>
                                     <td>화 5 6 ( )</td>
                                     <td>0 / 20</td>
-                                    <td><input type="checkbox"></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td><button class="register" onClick="register9Click()" id="a-9"></button></td>
-                                    <td>인간</td>
-                                    <td>H19610906</td>
-                                    <td></td>
-                                    <td>도로교통법고찰</td>
-                                    <td>-</td>
-                                    <td>2</td>
-                                    <td>한문철</td>
-                                    <td>목 3 4 ( )</td>
-                                    <td>0 / 60</td>
-                                    <td><input type="checkbox"></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td><button class="register" onClick="register10Click()" id="a-10"></button></td>
-                                    <td>인간</td>
-                                    <td>T19870822</td>
-                                    <td></td>
-                                    <td>폭력근절캠페인</td>
-                                    <td>-</td>
-                                    <td>1</td>
-                                    <td>박연진</td>
-                                    <td>목 7 ( )</td>
-                                    <td>0 / 36</td>
                                     <td><input type="checkbox"></td>
                                     <td></td>
                                 </tr>
