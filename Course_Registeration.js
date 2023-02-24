@@ -25,7 +25,7 @@ function register1Click() {
       rc1++
       done(1)
 
-      if (count === 8) {
+      if (count === 10) {
         stopStopwatch()
       }
     }
@@ -46,7 +46,7 @@ function register2Click() {
       rc2++
       done(2)
 
-      if (count === 8) {
+      if (count === 10) {
         stopStopwatch()
       }
     }
@@ -67,7 +67,7 @@ function register3Click() {
       rc3++
       done(3)
 
-      if (count === 8) {
+      if (count === 10) {
         stopStopwatch()
       }
     }
@@ -88,7 +88,7 @@ function register4Click() {
       rc4++
       done(4)
 
-      if (count === 8) {
+      if (count === 10) {
         stopStopwatch()
       }
     }
@@ -108,7 +108,7 @@ function register5Click() {
       rc5++
       done(5)
 
-      if (count === 8) {
+      if (count === 10) {
         stopStopwatch()
       }
     }
@@ -128,7 +128,7 @@ function register6Click() {
       rc6++
       done(6)
 
-      if (count === 8) {
+      if (count === 10) {
         stopStopwatch()
       }
     }
@@ -148,7 +148,7 @@ function register7Click() {
       rc7++
       done(7)
 
-      if (count === 8) {
+      if (count === 10) {
         stopStopwatch()
       }
     }
@@ -168,13 +168,52 @@ function register8Click() {
       rc8++
       done(8)
 
-      if (count === 8) {
+      if (count === 10) {
         stopStopwatch()
       }
     }
   }
 }
+function register9Click() {
+  //여덟 번째 과목 클릭 시 실행되는 함수
+  var TorF = confirm('해당 과목을 수강신청 하시겠습니까?')
+  if (TorF == true) {
+    if (rc9 + 1 == 2) {
+      alert(
+        '201 : 이미 신청된 교과목을 신청하였습니다.\n 다시확인하시고 신청해 주십시오.'
+      )
+    } else {
+      alert('수강신청이 저장완료되었습니다.')
+      count++
+      rc9++
+      done(9)
 
+      if (count === 10) {
+        stopStopwatch()
+      }
+    }
+  }
+}
+function register10Click() {
+  //여덟 번째 과목 클릭 시 실행되는 함수
+  var TorF = confirm('해당 과목을 수강신청 하시겠습니까?')
+  if (TorF == true) {
+    if (rc10 + 1 == 2) {
+      alert(
+        '201 : 이미 신청된 교과목을 신청하였습니다.\n 다시확인하시고 신청해 주십시오.'
+      )
+    } else {
+      alert('수강신청이 저장완료되었습니다.')
+      count++
+      rc10++
+      done(10)
+
+      if (count === 10) {
+        stopStopwatch()
+      }
+    }
+  }
+}
 function stopStopwatch() {
   //스톱워치, register 총합 8번 눌렸을 시 스톱워치 종료
   var today2 = new Date()
@@ -211,6 +250,12 @@ function deleteDone(nowCnt) {
         break
       case 8:
         rc8--
+        break
+      case 9:
+        rc9--
+        break
+      case 10:
+        rc10--
         break
     }
     const parent = document.getElementById('done')
@@ -344,7 +389,7 @@ function done(clicked) {
     text.push(document.createTextNode('전공'))
     text.push(document.createTextNode('I23398948'))
     text.push(document.createTextNode(''))
-    text.push(document.createTextNode('프론트엔드의 모든 것'))
+    text.push(document.createTextNode('프론트엔드'))
     text.push(document.createTextNode('2'))
     text.push(document.createTextNode('2'))
     text.push(document.createTextNode('임창용'))
@@ -472,7 +517,60 @@ function done(clicked) {
       }
     }
   }
-
+  if (clicked === 9) {
+    noObject[cnt] = clicked;
+    text.push(document.createTextNode(`${cnt}`))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('인간'))
+    text.push(document.createTextNode('H19610906'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('도로교통법고찰'))
+    text.push(document.createTextNode('-'))
+    text.push(document.createTextNode('2'))
+    text.push(document.createTextNode('한문철'))
+    text.push(document.createTextNode('목 3 4( )'))
+    text.push(document.createTextNode('0 / 60'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode(''))
+    for (i = 0; i < text.length; i++) {
+      if (i === 1) {
+        td[i].appendChild(btn)
+      }
+      if (i === 11) {
+        td[i].appendChild(ipt)
+      }
+      if (i !== 1 && i !== 11) {
+        td[i].appendChild(text[i])
+      }
+    }
+  }
+  if (clicked === 10) {
+    noObject[cnt] = clicked;
+    text.push(document.createTextNode(`${cnt}`))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('인간'))
+    text.push(document.createTextNode('T19870822'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode('폭력근절캠페인'))
+    text.push(document.createTextNode('-'))
+    text.push(document.createTextNode('1'))
+    text.push(document.createTextNode('박연진'))
+    text.push(document.createTextNode('목 7 ( )'))
+    text.push(document.createTextNode('0 / 36'))
+    text.push(document.createTextNode(''))
+    text.push(document.createTextNode(''))
+    for (i = 0; i < text.length; i++) {
+      if (i === 1) {
+        td[i].appendChild(btn)
+      }
+      if (i === 11) {
+        td[i].appendChild(ipt)
+      }
+      if (i !== 1 && i !== 11) {
+        td[i].appendChild(text[i])
+      }
+    }
+  }
   for (i = 0; i < 13; i++) {
     //td에 저장한 노드들을 tr의 자식노드로 전달
     tr.appendChild(td[i])
@@ -493,4 +591,6 @@ var rc5 = 0
 var rc6 = 0
 var rc7 = 0
 var rc8 = 0
+var rc9 = 0
+var rc10 = 0
 var today1 = new Date() //수강신청 및 수정/삭제 페이지 들어오자마자의 시간
