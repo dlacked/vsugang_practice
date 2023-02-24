@@ -7,6 +7,10 @@ body {
   background-color: white;
 }
 
+#notice{
+  width: 70vh;
+}
+
 .half {
   display: grid;
   grid-template-columns: 220px 1fr;
