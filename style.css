@@ -8,7 +8,7 @@ body {
 }
 
 #notice{
-  width: 70vh;
+  height: 70vh;
 }
 
 .half {
@@ -195,6 +195,10 @@ title {
   grid-template-columns: 1fr 40fr 1fr;
 }
 
+hr{
+  width: 90%;
+}
+
 .register {
   /*Course_Registeration.html의 REGISTER 버튼*/
   background-image: url('img/register.png');
@@ -220,6 +224,11 @@ title {
   color: #ab704f;
   text-align: left;
   font-size: 13px;
+}
+
+.verified{
+  width: calc(22px + 4.8vmin);
+  height: calc(7.75px + 1.7vmin);
 }
 
 @font-face {
