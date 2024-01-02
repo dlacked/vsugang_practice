@@ -8,7 +8,7 @@
         <link href="style.css" rel="stylesheet" type="text/css">
         <script>
             function notEntry(){ //notice, 수강신청 및 수정/삭제, 개발자 소개 외의 버튼 눌렀을 때 실행
-                alert("'수강신청 및 수정/삭제'를 눌러 측정을 시작하세요.")
+                alert("현재 개발 중에 있습니다.")
             }
         </script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4120209556823700"
@@ -18,7 +18,7 @@
         <div class="half"> <!--메뉴(왼쪽)와 정보(오른쪽) 나눔(display: grid)-->
             <div class="left"> <!--화면의 왼쪽 메뉴에 해당, HUFS Blue(위)과 HUFS GOLD(아래) 나눔(display: grid)-->
                 <div class="hufsBlue"> <!--HUFS Blue-->
-                    <h1>2023 - 2학기 수강신청 연습</h1>
+                    <h1>NaN 수강신청 연습</h1>
                     <p>학번 : </p>
                     <p>성명 : 수강신청연습</p>
                     <p>캠퍼스 : </p>
@@ -28,8 +28,8 @@
                 </div>
                 <div class="hufsGold"> <!--HUFS GOLD부분-->
                     <div><button class = "button" onclick="notEntry()">로그아웃(Logout)</button></div>
-                    <div><button id="noticeButton" onclick="location.href='index.html'">Notice</button></div>
-                    <div><button class = "button" onclick="location.href='Course_Registeration.html'">수강신청 및 수정/삭제</button></div>
+                    <div><button class = "button" onclick="notEntry()">Notice</button></div>
+                    <div><button class = "button" onclick="notEntry()">수강신청 및 수정/삭제</button></div>
                     <div><button class = "button" onclick="notEntry()">수강신청열람</button></div>
                     <div><button class = "button" onclick="notEntry()">시간표조회</button></div>
                     <div><button class = "button" onclick="notEntry()">강의시간표조회</button></div>
@@ -39,21 +39,13 @@
             <div class="right"> <!--화면의 오른쪽 정보 출력에 해당, 내용 가운데 배치를 위해 grid 사용-->
                 <div></div>
                 <div>
-                    <img id="notice" alt="notice" src="img/notice.png">
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4120209556823700"
-                        crossorigin="anonymous"></script>
-                    <!-- displayad -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-4120209556823700"
-                        data-ad-slot="1737879034"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
+                    <div id="alert">학우님들의 2024-1학기 수강신청을 돕기 위해 열심히 일하는 중입니다.</div>
+                    <div id="alert">추후 에브리타임에 공지 올리도록 하겠습니다.</div>
                 </div>
                 <div></div>
                 <div>
                     <hr>
-                    Copyright 2023. dlacked All rights reserved.
+                    Copyright 2023-2024. dlacked All rights reserved.
                     <p style="padding-top: 0.5%;">
                         <a href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fvsugangpractice.com%2F&ucn_lang=ko&ucn_task=conformance#" target="_blank">
                             <img class="verified" src="img/html5.svg" alt="Valid HTML!" height="31" width="88"></a>
@@ -67,5 +59,6 @@
                 </div>
             </div>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>

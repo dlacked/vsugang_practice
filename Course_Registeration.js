@@ -178,7 +178,18 @@ function register8Click() {
 function stopStopwatch() {
   //스톱워치, register 총합 8번 눌렸을 시 스톱워치 종료
   var today2 = new Date()
-  alert(`${(today2 - today1) / 1000}초 걸렸습니다.`) //스톱워치 종료시간에서 페이지 입장 시간을 뺌
+  if(localStorage.getItem('duringTime')){
+    var duringTimeData = localStorage.getItem('duringTime');
+    //console.log(duringTimeData)
+    //console.log((today2-today1)/1000)
+    total = parseFloat(duringTimeData) + parseFloat((today2 - today1) / 1000)
+    alert(`[보고서]\n10시 순발력: ${duringTimeData}\nSELECT 버튼 순발력: ${(today2-today1)/1000}\n총 ${total.toFixed(3)}초 걸렸습니다.`) //스톱워치 종료시간에서 페이지 입장 시간을 뺌
+    location.replace('index.html')
+  } else {
+    alert('001: 예기치 못한 오류')
+    location.replace('index.html')
+  }
+  
   //location.replace('index.html');
   //console.log(noObject)
 }

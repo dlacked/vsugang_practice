@@ -41,7 +41,7 @@ body {
 }
 
 .hufsBlue {
-  background-color: #1f326a;
+  background-color: #008294;
   padding-left: 10px;
 }
 
@@ -231,6 +231,32 @@ hr{
   height: calc(7.75px + 1.7vmin);
 }
 
+#timer{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-style: solid;
+  border-color: #444444;
+  font-size: 100px;
+}
+
+.timerLoc{
+  display: grid;
+  grid-template-columns: 600px auto 600px;
+  text-align: center;
+}
+
+#alert{
+  font-family: '외대굵';
+  margin-top: 10px;
+  color: #002d56;
+  font-weight: 900;
+  font-size: 3vh;
+}
+
+#hope{
+  margin-top: 10px;
+  color: green;
+}
 @font-face {
   font-family: '외대얇';
   src: url(fonts/한국외대체M.ttf);
