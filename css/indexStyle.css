@@ -1,0 +1,73 @@
+html, body{
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+#Rdiv{
+    display: grid;
+    grid-template-rows: 1fr 3fr auto;
+    height: 100vh;
+    
+    text-align: center;
+}
+
+#buttonDiv{
+    display: grid;
+    grid-template-columns: 30px 1fr 1fr 1fr 30px;
+}
+
+#hrDlacked{
+    width: 90%;
+}
+
+button{
+    border-radius: 4vh;
+    margin: 6%;
+    cursor: pointer;
+    transition: 0.5s;
+    text-align: left;
+    font-size: 3vh;
+    font-family: '고딕보';
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-bottom: 50vh;
+    color: white;
+    border-style: hidden;
+    background-color: #adadad;
+}
+
+#logo{
+    height: 3vh;
+    margin: 1%;
+}
+
+h1{
+    font-family: '외대얇';
+    color:#002d56;
+    text-align: center;
+    font-size: 70px;
+}
+
+
+p{
+    font-size:16px;
+    color: red;
+}
+
+@font-face {
+    font-family: '외대얇';
+    src: url(../fonts/한국외대체M.ttf);
+}
+
+@font-face {
+    font-family: '외대굵';
+    src: url(../fonts/한국외대체B.ttf);
+}
+  
+@font-face {
+    font-family: '고딕보';
+    src: url(../fonts/a고딕17.ttf);
+}
+  

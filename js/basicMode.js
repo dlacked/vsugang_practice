@@ -23,8 +23,8 @@ clickedSugang.onclick = function(){    //스톱워치, register 총합 8번 눌�
     } else {
         duringTime = (endTime - startTime) / 1000 //스톱워치 종료시간에서 페이지 입장 시간을 뺌
         localStorage.setItem('duringTime', duringTime);
-        console.log(duringTime);
-        location.replace('Course_Registeration.html');
+        //console.log(duringTime);
+        location.replace('../html/Course_Registeration.html');
     }
     //location.replace('index.html');
     //console.log(noObject)
