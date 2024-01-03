@@ -1,3 +1,5 @@
+//basicMode용 js코드
+
 function pyoDisplay() {
   //Search 버튼 눌렀을 때 표 표시
   const pyo = document.getElementById('pyo')
@@ -8,7 +10,7 @@ function pyoDisplay() {
 
 function notEntry() {
   //notice, 수강신청 및 수정/삭제, 개발자 소개 외의 버튼 눌렀을 때 실행
-  alert("'수강신청 및 수정/삭제'를 눌러 측정을 시작하세요.")
+  alert("해당 버튼은 사용이 불가능합니다.")
 }
 
 function register1Click() {
@@ -183,11 +185,11 @@ function stopStopwatch() {
     //console.log(duringTimeData)
     //console.log((today2-today1)/1000)
     total = parseFloat(duringTimeData) + parseFloat((today2 - today1) / 1000)
-    alert(`[보고서]\n10시 순발력: ${duringTimeData}\nSELECT 버튼 순발력: ${(today2-today1)/1000}\n총 ${total.toFixed(3)}초 걸렸습니다.`) //스톱워치 종료시간에서 페이지 입장 시간을 뺌
-    location.replace('index.html')
+    alert(`[보고서]\nTIME: ${duringTimeData}\nSIGN UP: ${(today2-today1)/1000}\n총 ${total.toFixed(3)}s 걸렸습니다.`) //스톱워치 종료시간에서 페이지 입장 시간을 뺌
+    location.replace('../index.html')
   } else {
-    alert('001: 예기치 못한 오류')
-    location.replace('index.html')
+    alert('예기치 못한 오류.\n개발자에게 문의하세요.')
+    location.replace('../index.html')
   }
   
   //location.replace('index.html');
