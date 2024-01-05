@@ -11,7 +11,7 @@ html, body{
 
 #Rdiv{
     display: grid;
-    grid-template-rows: 1fr 3fr auto;
+    grid-template-rows: auto auto 3fr auto;
     height: 100vh;
     
     text-align: center;
@@ -30,6 +30,23 @@ html, body{
     width: 90%;
 }
 
+#ad{
+    display: flex;
+    background-color: #002d56;
+    width: 100%;
+    font-family: '고딕얇';
+    font-size: 1.3vh;
+    height: 120%;
+}
+
+#adEle{
+    margin: auto;
+}
+
+#hufs70{
+    width: 5vh;
+    
+}
 button{
     border-radius: 4vh;
     margin: 6%;
@@ -46,6 +63,27 @@ button{
     border-top-width: 30px;
     border-top-style:solid;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+}
+
+button:focus{
+    outline: none;
+}
+
+.buttonTextPosition{
+    position: absolute;
+    top: 10px;
+    padding-right: 3vh;
+}
+
+.buttonImgPosition{
+    position: absolute;
+    width: 30vh;
+    bottom: -50px;
+    right: -50px;
 }
 
 #logo{
@@ -58,9 +96,27 @@ h1{
     font-size: 70px;
     font-weight: 100;
 }
+
 #TPButton{
     background-color: #008294;
     border-color: #006f7e;
+}
+
+#TPButton::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,111,126, 0.2);
+    top: -100%;
+    left: 0;
+    transition: 0.4s;
+    border-radius: 4vh;
+}
+
+#TPButton:hover::before{
+    transform: translateY(100%);
+
 }
 
 #SPButton{
@@ -68,15 +124,49 @@ h1{
     border-color: #002446;
 }
 
+#SPButton::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,36,70, 0.2);
+    top: -100%;
+    left: 0;
+    transition: 0.4s;
+    border-radius: 4vh;
+}
+
+#SPButton:hover::before{
+    transform: translateY(100%);
+
+}
+
 #BButton{
     background-color: #8d704f;
     border-color: #69543b;
 }
 
+#BButton::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(105, 84, 59, 0.2);
+    top: -100%;
+    left: 0;
+    transition: 0.4s;
+    border-radius: 4vh;
+}
+
+#BButton:hover::before{
+    transform: translateY(100%);
+
+}
+
 button:hover{
     margin:3%;
-    transition: 0.5s;
     font-size: 4.5vh;
+    
 }
 
 #TPButton:hover{
@@ -114,6 +204,11 @@ h2{
     src: url(../fonts/a고딕17.ttf);
 }
 
+@font-face {
+    font-family: '고딕얇';
+    src: url(../fonts/a고딕10.ttf);
+}
+
 @media (max-width: 1024px) {
     html,
     body{
@@ -122,12 +217,12 @@ h2{
         width: 100%;
     }
 
-    h1, button, img {
+    h1, button, img, #ad, hr {
         display: none;
     }
 
     h2{
-        font-family: '외대얇';
+        font-family: '고딕얇';
         color: white;
         display: contents;
         text-align: center;

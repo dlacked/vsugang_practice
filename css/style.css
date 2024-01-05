@@ -72,6 +72,10 @@ p {
   cursor: pointer;
 }
 
+.button:focus{
+  outline: none;
+}
+
 .button:hover {
   background-color: #826648;
 }
