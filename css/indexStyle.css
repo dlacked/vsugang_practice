@@ -81,7 +81,7 @@ button:focus{
 
 .buttonImgPosition{
     position: absolute;
-    width: 30vh;
+    height: 30vh;
     bottom: -50px;
     right: -50px;
 }
