@@ -70,6 +70,7 @@ p {
   border-style: hidden;
   font-family: 굴림;
   cursor: pointer;
+  outline: none;
 }
 
 .button:focus{
