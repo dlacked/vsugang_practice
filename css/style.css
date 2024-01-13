@@ -4,7 +4,8 @@ body {
   margin: 0;
   height: 100vh;
   font-family: 굴림;
-  background-color: white;
+  background-image: url('../img/watermark.png');
+  background-size: 250px;
 }
 
 #notice{
@@ -244,6 +245,7 @@ hr{
   border-color: #f7f7f7;
   font-size: 100px;
   color: #5D5D5D;
+  background-color: white;
 }
 
 .timerLoc{
