@@ -12,7 +12,7 @@ html, body{
 
 #Rdiv{
     display: grid;
-    grid-template-rows: auto auto 3fr auto;
+    grid-template-rows: auto auto 1fr 70px;
     height: 100vh;
     
     text-align: center;
@@ -36,7 +36,7 @@ html, body{
     background-color: #002d56;
     width: 100%;
     font-family: '고딕얇';
-    font-size: 1.3vh;
+    font-size: 1.5vh;
     height: 120%;
 }
 
@@ -54,7 +54,7 @@ button{
     cursor: pointer;
     transition: 0.5s;
     text-align: left;
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-family: '고딕보';
     padding-left: 3vh;
     padding-right: 3vh;
@@ -95,7 +95,7 @@ button:focus{
 h1{
     font-family: '외대얇';
     text-align: center;
-    font-size: 50px;
+    font-size: 3vw;
     font-weight: 100;
 }
 
@@ -184,7 +184,7 @@ button:hover{
 }
 
 p{
-    font-size:15px;
+    font-size:1vw;
 }
 
 h2{
@@ -211,7 +211,7 @@ h2{
     src: url(../fonts/a고딕10.ttf);
 }
 
-@media (max-width: 640px) or (max-height: 480px){
+@media (max-width: 880px) or (max-height: 520px){
     html,
     body{
         background-color: #0e0e0e;
