@@ -85,6 +85,7 @@ button:focus{
     height: 30vh;
     bottom: -50px;
     right: -50px;
+    opacity: 0.3;
 }
 
 #logo{
