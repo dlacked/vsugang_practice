@@ -34,7 +34,7 @@ html, body{
     display: flex;
     background-color: #002d56;
     width: 100%;
-    font-family: '고딕얇';
+    font-family: 'Pretendard';
     font-size: 1.5vh;
     height: 120%;
 }
@@ -54,7 +54,8 @@ button{
     transition: 0.5s;
     text-align: left;
     font-size: 2.5vw;
-    font-family: '고딕보';
+    font-weight: 600;
+    font-family: 'Pretendard';
     padding-left: 3vh;
     padding-right: 3vh;
     padding-bottom: 60%;
@@ -201,13 +202,8 @@ h2{
 }
   
 @font-face {
-    font-family: '고딕보';
-    src: url(../fonts/a고딕17.ttf);
-}
-
-@font-face {
-    font-family: '고딕얇';
-    src: url(../fonts/a고딕10.ttf);
+    font-family: 'Pretendard';
+    src: url(../fonts/PretendardVariable.ttf);
 }
 
 @media (max-width: 991px){ /* 모바일 버전 css 디자인*/
