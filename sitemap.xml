@@ -9,8 +9,37 @@
 
 <url>
   <loc>https://vsugangpractice.com/</loc>
-  <lastmod>2024-02-03T03:57:56+00:00</lastmod>
+  <lastmod>2024-02-04T04:35:11+00:00</lastmod>
+  <priority>1.0</priority>
 </url>
-
-
+<url>
+  <loc>https://vsugangpractice.com/html/timeMode.html</loc>
+  <lastmod>2024-02-04T04:35:11+00:00</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://vsugangpractice.com/html/signupMode.html</loc>
+  <lastmod>2024-02-04T04:35:11+00:00</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://vsugangpractice.com/html/basicMode.html</loc>
+  <lastmod>2024-02-04T04:35:11+00:00</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://vsugangpractice.com/html/developer.html</loc>
+  <lastmod>2024-02-04T04:35:11+00:00</lastmod>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://vsugangpractice.com/html/Course_Registeration.html</loc>
+  <lastmod>2024-02-04T04:35:11+00:00</lastmod>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://vsugangpractice.com/html/SMCourse_Registeration.html</loc>
+  <lastmod>2024-02-04T04:35:11+00:00</lastmod>
+  <priority>0.3</priority>
+</url>
 </urlset>
