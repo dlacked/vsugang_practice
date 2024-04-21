@@ -30,7 +30,7 @@ body {
 .right {
   /*developer.html, index.html의 오른쪽 부분 구성*/
   display: grid;
-  grid-template-rows: auto 1fr 1fr auto;
+  grid-template-rows: auto 1fr 1fr auto auto;
   text-align: center;
 }
 
