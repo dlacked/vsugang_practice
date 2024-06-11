@@ -313,8 +313,9 @@ h2{
 }
 
 @media (max-width: 800px){
+
     h1{
-        font-size: 40px;
+        font-size: 30px;
     }
 
     #buttonDiv{
@@ -336,11 +337,7 @@ h2{
         display: none;
     }
 
-}
-
-@media (max-width: 728px){
-    #Rdiv{
+    #adfit{
         display: none;
     }
-
 }
