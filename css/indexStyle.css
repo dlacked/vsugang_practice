@@ -202,6 +202,10 @@ h2{
     display: none;
 }
 
+#notAvaliableScreenIndex{
+    display: none;
+}
+
 @font-face {
     font-family: '외대얇';
     src: url(../fonts/한국외대체M.ttf);
@@ -338,7 +342,17 @@ h2{
 }
 
 @media (max-width: 600px){
-    body{
+    #Rdiv{
         display: none;
+    }
+    #notAvaliableScreenIndex{
+        display: block;
+        margin: 0;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    body{
+        background-color: black;
     }
 }

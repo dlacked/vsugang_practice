@@ -1,16 +1,11 @@
-let clickedTM = document.getElementById('TPButton')
-let clickedSM = document.getElementById('SPButton')
-let clickedBM = document.getElementById('BButton')
-
-/*clickedTM.onclick = function(){
-    location.replace('./html/timeMode.html')
-}
-
-clickedSM.onclick = function(){
-    location.replace('./html/signupMode.html')
-}
-
-clickedBM.onclick = function(){
-    location.replace('./html/basicMode.html')
-}
-*/
+let ad = document.getElementById('adEle');
+let c = 0;
+setInterval(() => {
+    if (c == 0){
+        ad.innerHTML='Developed by dlacked.';
+        ++c
+    }else{
+        ad.innerHTML='<div><img id="hufs70" src="./img/hufs70.png"></div>한국외국어대학교 70주년';
+        --c
+    }
+}, 3000);
